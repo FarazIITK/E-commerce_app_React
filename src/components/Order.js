@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/App.css";
 
 function Order({ cart, products }) {
-  // to update the total amount, as the products are added to the cart
+  // to update the total amount, when the products are added to the cart
   let [value, setValue] = useState(0);
 
   // to calculate the cart total based upon the number of products added
