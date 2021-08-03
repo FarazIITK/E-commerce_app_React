@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
-import CartItem from "./cart_item";
-import Order from "./Order";
+import "../styles/App.css";
+import CartItem from "./CartItem"; // for the display block of each item added to cart
+import Order from "./Order"; // for the display block of total amount and te order button
 
 function MyCart({ cart, products }) {
   return (
     <div className="cart">
+      {/* for each item in the cart, a display block is created */}
       {cart.map((element) => {
         return (
           <CartItem
@@ -16,6 +17,7 @@ function MyCart({ cart, products }) {
           />
         );
       })}
+      {/* creates the display block with total amount and the order button */}
       <Order cart={cart} products={products} />
     </div>
   );

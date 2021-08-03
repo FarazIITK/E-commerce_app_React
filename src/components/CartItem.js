@@ -1,7 +1,8 @@
 import React from "react";
-import "./App.css";
+import "../styles/App.css";
 
 function CartItem({ name, price, imgLink }) {
+  // creates the display block for each item in the cart
   return (
     <div className="cart-item">
       <img className="cart-img" src={imgLink} alt="Not found" />
