@@ -9,6 +9,7 @@ function Item({ name, price, imgLink, id, cart }) {
   const addToCart = () => {
     if (cart.indexOf(id - 1) === -1) {
       setElement(cart.push(id - 1));
+      alert("Product added successfully to cart");
     } else {
       alert("Product already in cart");
     }
