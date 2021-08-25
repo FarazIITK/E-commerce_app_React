@@ -8,9 +8,9 @@ function Order({ cart, products }) {
   // to calculate the cart total based upon the number of products added
   const calculateValue = () => {
     value = 0;
-    for (let i = 0; i < cart.length; i++) {
-      value += products[cart[i]].price;
-    }
+    cart.forEach((value, key) => {
+      value += products.find((x) => x.id === key).price * value;
+    });
     setValue(value);
   };
 
@@ -18,7 +18,6 @@ function Order({ cart, products }) {
   useEffect(() => {
     calculateValue();
   });
-
   // function invoked on cicking the order button
   const orderPlaced = () => {
     alert("Order placed");

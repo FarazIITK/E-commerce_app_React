@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/App.css";
 
-function Item({ name, price, imgLink, id, cart }) {
-  const [, setElement] = useState(cart); // to update the cart array each time we click the 'add to cart' button
+function Item({ name, price, imgLink, id, cart, setCart }) {
+  // const [, setElement] = useState(cart); // to update the cart array each time we click the 'add to cart' button
 
   // checks if the product is present in the cart or not
   // If the product is not present in the cart, then it adds the index of the product in the cart array
   const addToCart = () => {
-    if (cart.indexOf(id - 1) === -1) {
-      setElement(cart.push(id - 1));
-      alert("Product added successfully to cart");
+    if (cart.has(id)) {
+      let value = cart.get(id);
+      setCart(cart.set(id, ++value));
     } else {
-      alert("Product already in cart");
+      setCart(cart.set(id, 1));
     }
   };
 

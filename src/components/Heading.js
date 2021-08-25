@@ -3,7 +3,20 @@ import "../styles/App.css";
 
 import { Link } from "react-router-dom"; // to link logo and the cart image
 
-function Heading({ cart }) {
+function Heading({ cart, newArray, setNewArray }) {
+  // const cartFormat = () => {
+  //   for (let i = 0; i < 20; i++) {
+  //     let count = 0;
+  //     for (let j = 0; j < cart.length; j++) {
+  //       if (i === cart[j]) {
+  //         count++;
+  //       }
+  //     }
+  //     if (count !== 0) {
+  //       setNewArray({ i, count });
+  //     }
+  //   }
+  // };
   const logoStyle = {
     // for modifying the nav logo
     color: "white",
