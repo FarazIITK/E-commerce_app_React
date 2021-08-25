@@ -7,11 +7,11 @@ function Order({ cart, products }) {
 
   // to calculate the cart total based upon the number of products added
   const calculateValue = () => {
-    value = 0;
+    let tempValue = 0;
     cart.forEach((value, key) => {
-      value += products.find((x) => x.id === key).price * value;
+      tempValue += products.find((x) => x.id === key).price * value;
     });
-    setValue(value);
+    setValue(tempValue);
   };
 
   // to update the cart total

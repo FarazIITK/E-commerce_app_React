@@ -6,7 +6,7 @@ function CartItem({ name, price, imgLink, count }) {
   return (
     <div className="cart-item">
       <img className="cart-img" src={imgLink} alt="Not found" />
-      <h3>{name}</h3>
+      <h3 className="cart-name">{name}</h3>
       <p className="cart-price">{price} $</p>
       <h2>{count}</h2>
     </div>

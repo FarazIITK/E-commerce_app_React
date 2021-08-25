@@ -13,6 +13,7 @@ function Item({ name, price, imgLink, id, cart, setCart }) {
     } else {
       setCart(cart.set(id, 1));
     }
+    alert(`Product added successfully and its quantity is ${cart.get(id)}`);
   };
 
   return (
